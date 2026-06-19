@@ -40,7 +40,6 @@ jobs:
           cp .env.docker .env.docker.tmp
           sed -i "s/your_deepseek_api_key_here/${{ secrets.DEEPSEEK_API_KEY }}/g" .env.docker.tmp
           mv .env.docker.tmp .env.docker
-          cat .env.docker
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
